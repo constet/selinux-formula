@@ -7,7 +7,7 @@ selinux:
   pkg.installed:
     - pkgs:
       - policycoreutils-python
-{%- if grains['osmajorrelease'][0] == '7' %}
+{%- if grains['osmajorrelease']|string == '7' %}
       - policycoreutils-devel
 {%- endif %}
 
